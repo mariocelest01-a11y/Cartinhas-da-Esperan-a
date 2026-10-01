@@ -1,0 +1,48 @@
+@import "tailwindcss";
+
+@theme {
+  --font-serif: 'Cormorant Garamond', Georgia, serif;
+  --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --color-wine: #6B1D2F;
+  --color-wine-dark: #4F1321;
+  --color-wine-light: #8B2B41;
+  --color-cream: #FAF7F2;
+  --color-cream-light: #FFFDF9;
+  --color-cream-card: #FFFFFF;
+  --color-warm-beige: #F3ECE4;
+  --color-soft-rose: #EBDAD4;
+  --color-gold: #B68A36;
+  --color-gold-light: #D9AC52;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: #FAF7F2;
+  color: #2D2725;
+}
+
+.font-serif-title {
+  font-family: var(--font-serif);
+}
+
+/* Subtle paper texture highlight */
+.paper-card {
+  background-color: #FFFFFF;
+  border: 1px solid rgba(182, 138, 54, 0.16);
+  box-shadow: 0 4px 20px -2px rgba(107, 29, 47, 0.04), 0 2px 6px -1px rgba(0, 0, 0, 0.02);
+}
+
+.paper-card-subtle {
+  background-color: #FAF7F2;
+  border: 1px solid rgba(217, 194, 184, 0.45);
+}
+
+/* Delicate dash cut border for printable representation */
+.border-dashed-craft {
+  border: 1.5px dashed rgba(182, 138, 54, 0.4);
+}
+

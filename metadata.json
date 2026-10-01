@@ -1,0 +1,9 @@
+{
+  "name": "Cartinhas da Esperança",
+  "description": "54 modelos diferentes de cartinhas cristãs prontas para imprimir, recortar e compartilhar mensagens de fé, paz, coragem e esperança. Por apenas R$10.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}
+
