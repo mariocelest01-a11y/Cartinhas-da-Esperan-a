@@ -1,4 +1,5 @@
 import { Download, Printer, Scissors, Heart, ArrowRight } from 'lucide-react';
+import maoEntregandoImg from '../assets/images/mao_entregando_cartinha_1790891002096.jpg';
 
 interface HowItWorksProps {
   onCtaClick: () => void;
@@ -80,7 +81,10 @@ export function HowItWorks({ onCtaClick }: HowItWorksProps) {
           <div className="md:col-span-5">
             <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/3] bg-[#EAE2D8]">
               <img
-                src="/src/assets/images/mao_entregando_cartinha_1790891002096.jpg"
+                src={maoEntregandoImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/mao_entregando_cartinha_1790891002096.jpg';
+                }}
                 alt="Mãos entregando uma cartinha de esperança e encorajamento com carinho"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"

@@ -1,4 +1,5 @@
 import { FileText, Sparkles, CheckCircle2, ShieldCheck, ArrowRight } from 'lucide-react';
+import heroMockupImg from '../assets/images/hero_cartinhas_mockup_1790890968287.jpg';
 
 interface HeroProps {
   onCtaClick: () => void;
@@ -37,7 +38,11 @@ export function Hero({ onCtaClick }: HeroProps) {
         <div className="relative max-w-4xl mx-auto mb-10">
           <div className="relative rounded-2xl overflow-hidden shadow-2xl border-4 border-white bg-white ring-1 ring-[#D8C7B9]/60">
             <img
-              src="/src/assets/images/hero_cartinhas_mockup_1790890968287.jpg"
+              src={heroMockupImg}
+              onError={(e) => {
+                // Fallback para caminho estático público se necessário
+                e.currentTarget.src = '/images/hero_cartinhas_mockup_1790890968287.jpg';
+              }}
               alt="Cartinhas da Esperança impressas organizadas delicadamente em uma cesta rústica e sobre mesa de linho"
               referrerPolicy="no-referrer"
               className="w-full h-auto max-h-[460px] object-cover"

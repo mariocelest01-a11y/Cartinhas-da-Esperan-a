@@ -1,4 +1,6 @@
 import { Printer, Scissors, HeartHandshake, Sparkles, ArrowRight } from 'lucide-react';
+import folhaA4Img from '../assets/images/folha_impressa_a4_1790890981139.jpg';
+import cestaCartinhasImg from '../assets/images/cesta_com_cartinhas_1790890991412.jpg';
 
 interface VisualMechanismProps {
   onCtaClick: () => void;
@@ -88,7 +90,10 @@ export function VisualMechanism({ onCtaClick }: VisualMechanismProps) {
           <div className="space-y-3">
             <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/3] bg-[#EAE2D8]">
               <img
-                src="/src/assets/images/folha_impressa_a4_1790890981139.jpg"
+                src={folhaA4Img}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/folha_impressa_a4_1790890981139.jpg';
+                }}
                 alt="Folha A4 impressa com modelos de cartinhas cristãs prontas para serem recortadas com tesoura"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
@@ -111,7 +116,10 @@ export function VisualMechanism({ onCtaClick }: VisualMechanismProps) {
           <div className="space-y-3">
             <div className="rounded-2xl overflow-hidden shadow-md border-2 border-white aspect-[4/3] bg-[#EAE2D8]">
               <img
-                src="/src/assets/images/cesta_com_cartinhas_1790890991412.jpg"
+                src={cestaCartinhasImg}
+                onError={(e) => {
+                  e.currentTarget.src = '/images/cesta_com_cartinhas_1790890991412.jpg';
+                }}
                 alt="Cesta decorativa com cartinhas de esperança prontas para serem sorteadas ou presenteadas"
                 referrerPolicy="no-referrer"
                 className="w-full h-full object-cover"
